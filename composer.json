@@ -1,0 +1,59 @@
+{
+    "name": "elgentos/magento2-alternate-urls-prismic",
+    "description": "Addon for Elgentos' Alternate URLs specifically for Prismic pages.",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "autoload": {
+        "files": [
+            "src/registration.php"
+        ],
+        "psr-4": {
+            "Elgentos\\AlternateUrlsPrismic\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Elgentos\\AlternateUrlsPrismic\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.4",
+        "elgentos/magento2-alternate-urls": "^1.0",
+        "elgentos/module-prismicio": "^1.7"
+    },
+    "require-dev": {
+        "youwe/testing-suite": "^2.13",
+        "youwe/coding-standard-magento2": "^1.7.0"
+    },
+    "repositories": {
+        "magento": {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    },
+    "archive": {
+        "exclude": [
+            "/.gitignore",
+            "/tests",
+            "/grumphp.yml",
+            "/pdepend.xml",
+            "/phpstan.neon",
+            "/phpunit.xml",
+            "/phpcs.xml",
+            "/phpmd.xml",
+            "/package.json",
+            "/.eslintrc.json",
+            "/.eslintignore"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "magento/composer-dependency-version-audit-plugin": true,
+            "youwe/coding-standard-phpstorm": true,
+            "phpro/grumphp-shim": true,
+            "youwe/testing-suite": true
+        }
+    }
+}
